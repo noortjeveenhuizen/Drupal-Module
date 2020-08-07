@@ -1,0 +1,6 @@
+thomas_more_ordering_form.admin.settings:
+  path: '/admin/config/user-interface/thomas-more-ordering-form/settings'
+  defaults:
+    _form: 'Drupal\thomas_more_ordering_form\Form\SettingsOrderingForm'
+  requirements:
+    _permission: 'access administration pages'

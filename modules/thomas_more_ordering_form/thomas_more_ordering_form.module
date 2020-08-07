@@ -1,0 +1,17 @@
+<?php
+
+function thomas_more_ordering_form_theme()
+{
+    return [
+        'ordering-form' => [
+        'variables' => [
+            'iceCream' => null,
+            'waffles' => null,
+            'topping' => null,
+            'taste' => null,
+            'choose' => null,
+            'form' => null,
+        ],
+        ],
+    ];
+}

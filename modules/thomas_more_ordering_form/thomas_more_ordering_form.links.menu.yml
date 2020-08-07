@@ -1,0 +1,5 @@
+thomas_more_ordering_form.admin.settings:
+  title: 'Ordering form'
+  parent: system.admin_config_ui
+  description: 'Configure ordering form.'
+  route_name: thomas_more_ordering_form.admin.settings

@@ -1,0 +1,5 @@
+name: Hello World
+type: module
+description: 'hello world'
+package: Test
+core: 8.x

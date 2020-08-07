@@ -1,0 +1,55 @@
+<?php
+
+use Drupal\Core\Database\Database;
+
+function thomas_more_ordering_form_schema()
+{
+    $schema['ordering_form'] = [
+        // Example (partial) specification for table "node".
+        'description' => 'The base table for nodes.',
+        'fields' => [
+        'id' => [
+            'description' => 'The primary identifier for a node.',
+            'type' => 'serial',
+            'unsigned' => true,
+            'not null' => true,
+        ],
+        'choose' => [
+            'description' => 'ice cream or waffles',
+            'type' => 'varchar',
+            'length' => 50,
+            'not null' => true,
+            'default' => '',
+        ],
+        'topping' => [
+            'description' => 'The current topping',
+            'type' => 'varchar',
+            'length' => 50,
+            'not null' => true,
+            'default' => '',
+        ],
+        'taste' => [
+            'description' => 'The current taste',
+            'type' => 'varchar',
+            'length' => 50,
+            'not null' => true,
+            'default' => '',
+        ],
+    ],
+        'primary key' => [
+        'id',
+        ],
+    ];
+
+    return $schema;
+}
+
+    function thomas_more_ordering_form_update_8001()
+    {
+        $table = thomas_more_ordering_form_schema();
+
+        $schema = Database::getConnection()->schema();
+        $schema->createTable('ordering_form', $table['ordering_form']);
+
+        return 'Succes';
+    }

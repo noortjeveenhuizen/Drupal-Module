@@ -1,0 +1,5 @@
+name: Ordering form
+type: module
+description: 'Makes ordering easier'
+package: Thomas more
+core: 8.x
